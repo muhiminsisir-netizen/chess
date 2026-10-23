@@ -1,0 +1,1 @@
+{"name":"cinematic-chess","version":"1.0.0","private":true,"type":"module","scripts":{"server":"node server/index.mjs","start":"npm run build && node server/index.mjs","dev":"npm --prefix client run dev","build":"npm --prefix client run build","typecheck":"npm --prefix client run typecheck"}}

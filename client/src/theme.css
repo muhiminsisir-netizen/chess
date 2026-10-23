@@ -1,0 +1,43 @@
+/* Modern daylight palette and softer, longer interactions */
+:root{--bg:#090a0b;--panel:#111314;--panel2:#191b1c;--gold:#d5b16a;--bronze:#785b35;--ivory:#f1eadb;--muted:#9a968b;--line:rgba(211,177,106,.2);color-scheme:dark}
+body{background:#090a0b;color:#f1eadb;transition:background-color .55s ease,color .45s ease}
+button,select,input{font:inherit}
+.btn{background:rgba(255,255,255,.025);color:#f1eadb;border-color:rgba(211,177,106,.2);border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.12);transition:transform .36s cubic-bezier(.2,.75,.25,1),box-shadow .36s ease,background-color .3s ease,border-color .3s ease}
+.btn:hover:not(:disabled){border-color:#d5b16a;background:rgba(213,177,106,.09);box-shadow:0 12px 26px rgba(0,0,0,.24);transform:translateY(-2px)}
+.btn.primary{color:#17120a;background:linear-gradient(135deg,#e1c47f,#ad8244);border-color:transparent;box-shadow:0 9px 22px rgba(92,69,32,.3)}
+.home{background:radial-gradient(ellipse at 78% 48%,#e7e4d9 0,#f0eee7 37%,#faf9f5 76%);color:#293630}
+.topbar{color:#35433c}.brand-mark{border-color:#8c7856;color:#846c45}.nav-note,.home-foot{color:#778078}
+.account-link{border-color:rgba(80,103,91,.28);color:#485a50;border-radius:8px}
+.hero h1{color:#293630}.hero h1 em{background:linear-gradient(100deg,#789082,#9f7848);background-clip:text;-webkit-text-fill-color:transparent}
+.eyebrow{color:#8d7044}.sub{color:#69736c}.home-meta{color:#788179}
+.home{height:100svh;min-height:650px;isolation:isolate}
+.hero-art{position:absolute;inset:0;z-index:0;width:auto;height:auto;display:block;pointer-events:none;overflow:visible}
+.home>.topbar,.home>.hero,.home>.home-foot{position:relative;z-index:2}
+.hero{width:min(52%,650px)}
+.hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:auto}
+.hero-canvas canvas{position:absolute!important;inset:0;width:100%!important;height:100%!important;filter:drop-shadow(0 22px 25px rgba(53,64,55,.14));animation:hero-arrive 1s cubic-bezier(.2,.8,.2,1) both}
+.hero-canvas canvas{border-radius:0!important;cursor:grab}.hero-canvas canvas:active{cursor:grabbing}
+.hero-caption{right:5%;bottom:0;color:#65746b;font-size:10px;letter-spacing:.2em}
+@keyframes hero-arrive{from{opacity:0;transform:translate3d(24px,22px,0) scale(.96)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+.game{background:radial-gradient(ellipse at 38% 42%,#1a1916,#090a0b 84%);color:#f1eadb}
+.gamebar{background:rgba(8,9,10,.82);border-bottom-color:rgba(255,255,255,.07);backdrop-filter:blur(16px)}
+.brand-small{color:#d9c9a8}.text-btn,.icon-btn{color:#aaa292}.mode-pill{color:#d5b16a}
+.stage{background:radial-gradient(ellipse at 46% 42%,#28251f 0,#1b1b19 58%,#111312 100%)}
+.panel{background:rgba(15,17,18,.96);border-left-color:rgba(255,255,255,.07);box-shadow:-12px 0 36px rgba(0,0,0,.16)}
+.panel h2{color:#d5b16a}.player-card{background:linear-gradient(135deg,#191b1c,#121415);border-color:rgba(255,255,255,.06);border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.player-card strong{color:#eee7d8}.player-card small{color:#8c8b82}.avatar{background:#33291b;color:#d8ba77}.clock{color:#d4c7ae}.clock.active{color:#16130d;background:#d4b26e}
+.moves{color:#46544b}.moves li{border-bottom-color:rgba(73,94,80,.1)}.moves li span:first-child{color:#899188}
+.settings-drawer{background:rgba(20,22,23,.98);border-left-color:rgba(211,177,106,.2);box-shadow:-30px 0 80px rgba(0,0,0,.45);backdrop-filter:blur(18px)}
+.settings-drawer h2{color:#eee7d8}.settings-drawer label{color:#aaa294}.settings-drawer select{background:#202323;color:#eee;border-color:#514634;border-radius:8px}.drawer-close{color:#ddd}.drawer-note{color:#817c70}
+.connection{color:#c9c1b3;background:#17191a;border-radius:8px}.connection-dot{background:#78b887;box-shadow:0 0 0 4px rgba(95,155,117,.12)}.connection button{color:#d5b16a}
+.promo{background:rgba(18,17,15,.98);color:#eee7d8;border-color:#ad9161;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.fallback{color:#c5bcaa}.modal-backdrop{background:rgba(0,0,0,.64);backdrop-filter:blur(9px)}
+.account-modal,.result-modal{background:#151718;color:#eee7d8;border-color:rgba(211,177,106,.26);border-radius:18px;box-shadow:0 28px 90px rgba(0,0,0,.5)}
+.account-modal h2,.result-modal h2{color:#eee7d8}.account-modal label{color:#aaa294}.account-modal input{background:#202323;border-color:#514634;color:#eee;border-radius:8px}.account-modal .text-btn{color:#d5b16a}.account-message{color:#b5a881}.profile-history li,.result-modal>p{color:#aaa294}.profile-history b{color:#d5b16a}.profile-history details{color:#b8b2a4}.profile-history details p{color:#aaa294}
+.result-moves{color:#c5bcaa}.profile-stats span{color:#d5b16a}.profile-stats small{color:#99958c}
+.theme-emerald{--gold:#728d7c}.theme-slate{--gold:#758791}
+/* Board-corner timers reuse the same authoritative values as the physical 3D clock. */
+.scene-clock{position:absolute;z-index:2;display:grid;gap:3px;min-width:104px;padding:8px 11px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(12,13,13,.78);box-shadow:0 8px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);pointer-events:none;color:#d8d0c0}
+.scene-clock span{font-size:8px;letter-spacing:.18em;color:#9b9588}.scene-clock strong{font:600 19px ui-monospace,monospace;letter-spacing:.04em}.scene-clock.is-active{border-color:rgba(213,177,106,.62);box-shadow:0 0 22px rgba(213,177,106,.12),0 8px 24px rgba(0,0,0,.28)}.scene-clock.is-active strong{color:#f1d28f}.scene-clock.far-side{top:14px;left:14px}.scene-clock.near-side{bottom:14px;right:14px}
+@media(max-width:850px){.home{height:auto;min-height:100svh}.hero{width:100%;max-width:560px;padding-top:30px}.hero-art{opacity:.53}.hero-canvas{inset:0}.hero-caption{display:none}.gamebar{background:rgba(8,9,10,.94)}.panel{background:rgba(15,17,18,.97);border-top-color:rgba(255,255,255,.08)}.panel h2{color:#d5b16a}.scene-clock{min-width:90px;padding:6px 8px}.scene-clock strong{font-size:17px}.scene-clock.far-side{top:8px;left:8px}.scene-clock.near-side{bottom:8px;right:8px}}
+@media(prefers-reduced-motion:reduce){.hero-canvas{animation:none}body,.btn{transition:none}}
